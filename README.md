@@ -1,61 +1,99 @@
-# Welcome to your OnSpace project
+Skin Care & Skin Disease Detection Website
+ Project Overview
 
-## How can I edit this code?
+This project is a web-based Skin Care and Skin Disease Detection system that allows users to upload a skin image and receive an AI-based prediction indicating whether the condition is Normal, Benign, or Malignant.
+The system is designed to assist in early awareness and screening, not to replace medical professionals.
 
-There are several ways of editing your application.
+The website integrates a deep learning image classification model with a modern web interface for real-time prediction.
 
-**Use OnSpace**
+ Objectives
 
-Simply visit the [OnSpace Project]() and start prompting.
+To build an AI-powered skin care website using deep learning
 
-Changes made via OnSpace will be committed automatically to this repo.
+To classify skin images into predefined categories
 
-**Use your preferred IDE**
+To provide fast and user-friendly prediction results
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in OnSpace.
+To demonstrate the application of AI in the healthcare domain
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+ AI Model Details
 
-Follow these steps:
+Model Type: Convolutional Neural Network (CNN)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Transfer Learning: MobileNetV2
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Framework: TensorFlow / Keras
 
-# Step 3: Install the necessary dependencies.
-npm i
+Training Platform: Google Colab
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Input Image Size: 224 × 224
 
-**Edit a file directly in GitHub**
+Output: Multi-class classification (Softmax)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+ Dataset Structure
+dataset/
+├── train/
+│   ├── benign/
+│   ├── malignant/
+│   └── normal/
+└── test/
+    ├── benign/
+    ├── malignant/
+    └── normal/
 
-**Use GitHub Codespaces**
+ Website Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Image upload for skin analysis
 
-## What technologies are used for this project?
+AI-based prediction
 
-This project is built with:
+Clear result display
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Simple and responsive UI
 
-## How can I deploy this project?
+No OTP / No password (direct access)
 
-Simply open [OnSpace]() and click on Share -> Publish.
+Suitable for demonstration and academic use
+
+Technologies Used
+Frontend
+
+  HTML
+
+  CSS
+
+  JavaScript
+
+Backend
+
+  Python
+
+  Flask (or equivalent backend framework)
+
+# AI / ML
+
+   TensorFlow
+
+   Keras
+
+   NumPy
+
+   OpenCV (optional)
+
+   Deployment
+
+   Vercel (Frontend)
+
+Model served locally or via backend API
+
+! How It Works
+
+User uploads a skin image
+
+Image is preprocessed (resize, normalization)
+
+Image is passed to the trained AI model
+
+Model predicts the class
+
+Result is displayed on the website
